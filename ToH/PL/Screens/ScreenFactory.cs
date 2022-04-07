@@ -11,8 +11,8 @@ public class ScreenFactory : IScreenFactory
     private readonly IHeroesController _heroesController;
     private readonly IPrinter _printer;
     private readonly ILog _log;
-    private HeroesListScreen? _heroesListScreen;
-    private HeroScreen? _heroScreen;
+    private HeroesListScreen _heroesListScreen;
+    private HeroScreen _heroScreen;
     private ISessionController _sessionController;
 
     public ScreenFactory(IHeroesController heroesController, ISessionController sessionController, IPrinter printer, ILog log)
@@ -23,7 +23,7 @@ public class ScreenFactory : IScreenFactory
         _sessionController = sessionController;
     }
 
-    public Screen? CreateScreen(Type type, Hero? hero = null)
+    public Screen CreateScreen(Type type, Hero hero = null)
     {
         Console.WriteLine(type);
         if (type == typeof(HeroesListScreen))

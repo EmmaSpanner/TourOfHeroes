@@ -4,7 +4,7 @@ namespace ToH.BLL;
 public class Controller : AbstractSubject
 {
     public virtual Action Action { get; private set; }
-    public virtual string? value { get; private set; }
+    public virtual string value { get; private set; }
     public void ListenForInput()
     {
         bool notExit = true;

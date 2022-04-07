@@ -22,7 +22,7 @@ public class Ui : IUi, IObserver
     }
     public IScreenFactory ScreenFactory { get; }
 
-    public Ui(Controller controller, Screen? screen, ILog log, IScreenFactory screenFactory)
+    public Ui(Controller controller, Screen screen, ILog log, IScreenFactory screenFactory)
     {
         Screen = screen;
         ScreenFactory = screenFactory;
